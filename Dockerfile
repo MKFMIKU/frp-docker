@@ -7,4 +7,6 @@ WORKDIR /
 
 EXPOSE 80 443 8090 8080 8000
 
-ENTRYPOINT ["/frp/frps"]
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
