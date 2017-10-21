@@ -1,7 +1,8 @@
-FROM golang:1.8
+FROM alpine:latest
 MAINTAINER kfm@clfstudio.com
 
 COPY . /frp
+COPY . entrypoint.sh
 
 WORKDIR /
 
