@@ -8,10 +8,10 @@ RUN apk add --no-cache --update wget \
  && rm -r frp_0.13.0_linux_amd64* \
  && chmod +x /usr/local/bin/frps
 
-COPY . /frps.ini
+COPY . /frp
 
 WORKDIR /
 
 EXPOSE 80 443 8090 8080 8000
 
-ENTRYPOINT ["/usr/local/bin/frps", "-L", "console", "-c", "/frps.ini"]
+ENTRYPOINT ["/usr/local/bin/frps", "-L", "console", "-c", "/frp/frps.ini"]
