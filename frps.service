@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 TimeoutStartSec=30
-ExecStart=/home/frp/frps -c /home/frp/frps.ini > /home/frp/woring.log 2>&1
+ExecStart=/home/frp/frps -c /home/frp/frps.ini
 ExecStop=/bin/kill $MAINPID
 
 [Install]
